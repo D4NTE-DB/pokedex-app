@@ -4,23 +4,27 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import '../App.css'
 
-const CharacterCard = () => {
+const CharacterCard = ({ url, key }) => {
 
     const [pokemon, setPokemon] = useState({})
     const [pokeSpecies, setPokeSpicies ] = useState({})
     const [pokemons, setPokemons] = useState([])
 
-    useEffect(() => {
-        axios.get(`https://pokeapi.co/api/v2/pokemon/1`)
-            .then(res => setPokemon(res.data))
-    }, [])
+    if (url) {
+        
+        useEffect(() => {
+            axios.get(`https://pokeapi.co/api/v2/pokemon/${url}`)
+                .then(res => setPokemon(res.data))
+        }, [key])
+    }
+   
 
     useEffect(() => {
         axios.get(`https://pokeapi.co/api/v2/pokemon-species/1`)
             .then(res => setPokeSpicies(res.data))
     }, [])
 
-    console.log(pokeSpecies.varieties?.[0].pokemon.name)
+    //console.log(pokeSpecies.varieties?.[0].pokemon.name)
 
     return (
         <div className='character-card'>

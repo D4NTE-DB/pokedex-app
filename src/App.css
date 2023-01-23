@@ -13,7 +13,7 @@ body{
 .Home{
   background: #E5E5E5;
   text-align: center;
-  margin-top: 128px; 
+  
   /* margin: 0 auto; */
 }
 
@@ -126,7 +126,7 @@ footer > .circle-in{
 header{
   position: absolute;
   width: 100%;
-  margin-top: -341px;
+  margin-top: -310px;
 }
 
 header img{

@@ -20,8 +20,10 @@ const Character = () => {
 
     useEffect(() => {
         axios.get(`https://rickandmortyapi.com/api/character/`)
-        .then(res => setCharacters(res.data.results))
+        .then(res => setCharacters(res.data))
     }, [])
+
+    console.log(characters?.[0]?.name)
 
     useEffect(() => {
         axios.get(`https://rickandmortyapi.com/api/character/`)
@@ -29,7 +31,7 @@ const Character = () => {
         .then
     }, [])
 
-    console.log(locations.results)
+    //console.log(locations.results)|
 
     const search = () => {
         navigate(`/character/${inputSearch.toLowerCase()}`)
@@ -42,13 +44,15 @@ const Character = () => {
         .then(res => console.log(res.data.residents))
     }
 
+    //console.log("locations " + characters.name)
+
     return (
         <div>
             <h1>Characters</h1>
             <h2>Welcome {userName}</h2>
             <div>
                 <input
-                    type="text"
+                    type="number"
                     placeholder='Set Character'
                     value={inputSearch}
                     onChange={e => setInputSearch(e.target.value)}
@@ -60,12 +64,6 @@ const Character = () => {
                 </div>
             </div>
             <div>
-                <select onChange={filterLocations}>
-                    {locations?.map(loc => (
-                        
-                        <option key={loc.results.id}>{loc.location}</option>
-                    ))}
-                </select>
             </div>
         </div>
     );
