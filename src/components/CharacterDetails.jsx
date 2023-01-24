@@ -2,8 +2,10 @@ import axios from 'axios';
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import pokedex from '../assets/image 11.png'
+import arrow from '../assets/2335215.png'
+
 
 
 const CharacterDetails = () => {
@@ -16,14 +18,18 @@ const CharacterDetails = () => {
     useEffect(() => {
         axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
             .then(res => setPokemon(res.data))
-    }, [id])
+    }, [pokemon.id])
 
     console.log(pokemon)
 
     return (
         <div className='character-details'>
             <header>
+            
+                <Link to="/">
                 <img src={pokedex} alt="" />
+                </Link>
+                
                 <div className="line-red">
                     
                 </div>
@@ -36,20 +42,23 @@ const CharacterDetails = () => {
                 <div className="circle-in">
                     s
                 </div>
-
+               
             </header>
             <div className="info-pokemon">
+            <Link to="/character">
+                    <img src={arrow} alt="" />
+                </Link>
                 <h2>#{pokemon.id}</h2>
                 <h2>{pokemon.name?.toUpperCase()}</h2>
                 <img src={pokemon.sprites?.other?.dream_world?.front_default} alt="" />
                 <h4>Peso: {pokemon.weight}</h4>
                 <h4>Altura: {pokemon.height}</h4>
                 <h2>Habilidades</h2>
-                <h4>{pokemon.abilities?.[0].ability?.name}</h4>
-                <h4>{pokemon.abilities?.[1].ability?.name}</h4>
+                <h4>{pokemon.abilities?.[0]?.ability?.name}</h4>
+                <h4>{pokemon.abilities?.[1]?.ability?.name}</h4>
                 <h2>Tipo</h2>
-                <h4>{pokemon.types?.[0].type.name}</h4>
-                <h4>{pokemon.types?.[1].type.name}</h4>
+                <h4>{pokemon.types?.[0]?.type.name}</h4>
+                <h4>{pokemon.types?.[1]?.type.name}</h4>
                 <h1>Stats</h1>
                 <div className="stats">
                     <div className="stat-hp">
@@ -72,8 +81,8 @@ const CharacterDetails = () => {
                 <h1>Movements</h1>
                 <div className="moves-list">
                     {
-                        pokemon.moves?.map((mov) => (
-                            <h4>{mov.move.name}</h4>
+                        pokemon.moves?.map((mov, i) => (
+                            <h4 key={i}>{mov.move.name}</h4>
                         ))
                     }
                 </div>

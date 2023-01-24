@@ -1,23 +1,21 @@
 import axios from 'axios';
 import React from 'react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import '../App.css'
 
 const CharacterCard = ({ url, key }) => {
 
     const [pokemon, setPokemon] = useState({})
-    const [pokeSpecies, setPokeSpicies ] = useState({})
+    const [pokeSpecies, setPokeSpicies] = useState({})
     const [pokemons, setPokemons] = useState([])
 
-    if (url) {
-        
-        useEffect(() => {
-            axios.get(`https://pokeapi.co/api/v2/pokemon/${url}`)
-                .then(res => setPokemon(res.data))
-        }, [key])
-    }
-   
+
+    useEffect(() => {
+        axios.get(`${url}`)
+            .then(res => setPokemon(res.data))
+    }, [key])
 
     useEffect(() => {
         axios.get(`https://pokeapi.co/api/v2/pokemon-species/1`)
@@ -30,7 +28,10 @@ const CharacterCard = ({ url, key }) => {
         <div className='character-card'>
             <h2>Info</h2>
             <h2>{pokemon.name}</h2>
+            <Link to={`/character/${pokemon.id}`}>
             <img src={pokemon.sprites?.other?.dream_world?.front_default} alt="" />
+
+            </Link>
             {/* <h2>{pokemon.varieties}</h2> */}
             <div className="stats">
                 <div className="stat-hp">
