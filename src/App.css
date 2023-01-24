@@ -138,6 +138,11 @@ footer > .circle-in{
   margin-top: 260px;
 }
 
+.info-pokemon > img{
+  width: 180px;
+  height: 200px;
+}
+
 .character-details{
   text-align: center;
 }
@@ -172,7 +177,7 @@ footer > .circle-in{
 /* -----HEADER FOR PAGES----- */
 
 header{
-  position: absolute;
+  position: fixed;
   width: 100%;
   margin-top: -310px;
 }
