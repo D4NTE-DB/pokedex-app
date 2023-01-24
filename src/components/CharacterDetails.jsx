@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import pokedex from '../assets/image 11.png'
 import arrow from '../assets/2335215.png'
+import { BoxIconElement } from 'boxicons';
 
 
 
@@ -36,18 +37,20 @@ const CharacterDetails = () => {
                 <div className="line-black">
                     
                 </div>
+                <div className="circle-item">
                 <div className="circle">
                     
                 </div>
                 <div className="circle-in">
                     s
                 </div>
-               
+               </div>
+               <Link to="/character">
+               <box-icon type='solid' name='left-arrow-circle'></box-icon>
+                </Link>
             </header>
             <div className="info-pokemon">
-            <Link to="/character">
-                    <img src={arrow} alt="" />
-                </Link>
+           
                 <h2>#{pokemon.id}</h2>
                 <h2>{pokemon.name?.toUpperCase()}</h2>
                 <img src={pokemon.sprites?.other?.dream_world?.front_default} alt="" />
