@@ -63,9 +63,7 @@ const Character = () => {
     return (
         <div className='character'>
             <header>
-                <Link to="/character">
-                    <img src={arrow} alt="" />
-                </Link>
+                
                 <Link to="/">
                 <img src={pokedex} alt="" />
                 </Link>
