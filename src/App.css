@@ -38,7 +38,7 @@ body{
   text-align: center;
 }
 
-.search > button{
+.search > a > button{
   width: 100px;
   height: 34px;
   background-color: #FE1936;
@@ -95,6 +95,12 @@ footer > .circle-in{
   width: 50%;
 }
 
+/* -----CHARACTER----- */
+
+.character{
+  text-align: center;
+}
+
 /* -----CHACACTER DETAILS CSS----- */
 
 .info-pokemon{
@@ -108,6 +114,7 @@ footer > .circle-in{
 .moves-list{
   display: flex;
   flex-direction: row;
+  color: #E5E5E5;
   flex-wrap: wrap;
   gap: .5rem;
   width: 60%;

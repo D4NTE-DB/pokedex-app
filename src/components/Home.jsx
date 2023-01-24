@@ -4,39 +4,47 @@ import '../App.css'
 import '../index.css'
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { changeUserName } from '../store/slices/userName.slice'
 
 const Home = () => {
 
-    const [userName, setUserName] = useState("")
+    const dispatch = useDispatch();
 
-    
+    const [inputValue, setInputValue] = useState("");
+
 
     return (
         <div className='Home'>
             <img src={pokedex} alt="" />
             <h2>¡Hola entrenador!</h2>
             <h4>Para comenzar dame tu nombre</h4>
-            <form action="" className='search'>
-                <input 
-                type="text"
-                placeholder='Tu nombre'
-                value={userName}
-                onChange={(e) => (
-                    setUserName(e.target.value)       
-                )}
+            <div action="" className='search'>
+                <input
+                    type="text"
+                    value={inputValue}
+                    onChange={e => setInputValue(e.target.value)}
                 />
-                <button>Comenzar</button>
-            </form>
+                <Link to="/character" >
+                    <button 
+                    onClick={() => dispatch(changeUserName(inputValue))} 
+                    >
+                        Comenzar
+                    </button>
+                </Link>
+
+            </div>
             <footer>
                 <div className="line-red">
                 </div>
                 <div className="line-black">
                 </div>
                 <div className="circle">
-                    
+
                 </div>
                 <div className="circle-in">
-                    
+
                 </div>
             </footer>
         </div>

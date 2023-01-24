@@ -14,12 +14,7 @@ const InputName = () => {
     return (
         <div>
             <h1>Input Name</h1>
-            <input
-             type="text" 
-             value={inputValue}
-                onChange={e => setInputValue(e.target.value)}
-             />
-            <button onClick={() => dispatch(changeUserName(inputValue))} >Submit</button>
+           
         </div>
     );
 };

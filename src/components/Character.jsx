@@ -8,27 +8,25 @@ import CharacterCard from './CharacterCard';
 
 const Character = () => {
 
-    const userName = useSelector(state => state.userName)
+    const userName = useSelector((state) => state.userName)
 
     const [characters, setCharacters] = useState({})
     const [inputSearch, setInputSearch] = useState("")
     const [locations, setLocations] = useState([])
- 
+
     const navigate = useNavigate();
 
-
-
     useEffect(() => {
         axios.get(`https://rickandmortyapi.com/api/character/`)
-        .then(res => setCharacters(res.data))
+            .then(res => setCharacters(res.data))
     }, [])
 
-    console.log(characters?.[0]?.name)
+    //console.log(characters?.[0]?.name)
 
     useEffect(() => {
         axios.get(`https://rickandmortyapi.com/api/character/`)
-        .then(res => setLocations(res.data))
-        .then
+            .then(res => setLocations(res.data))
+            .then
     }, [])
 
     //console.log(locations.results)|
@@ -38,29 +36,29 @@ const Character = () => {
     }
 
 
-    
+
     const filterLocations = e => {
         axios.get(e.targer.value)
-        .then(res => console.log(res.data.residents))
+            .then(res => console.log(res.data.residents))
     }
 
     //console.log("locations " + characters.name)
 
     return (
-        <div>
+        <div className='character'>
             <h1>Characters</h1>
             <h2>Welcome {userName}</h2>
             <div>
                 <input
                     type="number"
-                    placeholder='Set Character'
+                    placeholder='Set Pokemon'
                     value={inputSearch}
                     onChange={e => setInputSearch(e.target.value)}
-                 />
+                />
                 <button onClick={search}>Search</button>
                 <div className="character-list">
                     {/* {characters} */}
-                    <CharacterCard url={characters.url} key={characters.url}/>
+                    <CharacterCard url={characters.url} key={characters.url} />
                 </div>
             </div>
             <div>
