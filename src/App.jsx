@@ -19,7 +19,6 @@ function App() {
         <Route path='/character/' element={<Character/>}/>
         <Route path='/character/:id' element={<CharacterDetails/>}/>
         <Route path='/cd' element={<CharacterCard/>} />
-        <Route path='/inputName' element={<InputName/>}/>z  
       </Routes>
       </div>
     </HashRouter>
