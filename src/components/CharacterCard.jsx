@@ -30,26 +30,26 @@ const CharacterCard = ({ url, selectedType }) => {
             <img src={pokemon.sprites?.other?.dream_world?.front_default} alt="" />
             </Link>
             <h2>{pokemon.name?.toUpperCase()}</h2>
-            <h4>{pokemon.types?.[0]?.type.name} / {pokemon.types?.[1]?.type.name}</h4>
+            <h4>{pokemon.types?.[0]?.type.name}  {pokemon.types?.[1]?.type.name}</h4>
             {/* <h2>{pokemon.varieties}</h2> */}
             <div className="stats">
                 <div className="stat-hp">
-                    <h4>{pokemon.stats?.[0].stat.name}</h4>
-                    <h4>{pokemon.stats?.[0].base_stat}</h4>
+                    <h4>{pokemon.stats?.[0].stat.name.toUpperCase()}</h4>
+                    <h3>{pokemon.stats?.[0].base_stat}</h3>
                 </div>
                 <div className="stat-att">
-                    <h4>{pokemon.stats?.[1].stat.name}</h4>
-                    <h4>{pokemon.stats?.[1].base_stat}</h4>
+                    <h4>{pokemon.stats?.[1].stat.name.toUpperCase()}</h4>
+                    <h3>{pokemon.stats?.[1].base_stat}</h3>
                 </div>
             </div>
             <div className="stats">
                 <div className="stat-def">
-                    <h4>{pokemon.stats?.[2].stat.name}</h4>
-                    <h4>{pokemon.stats?.[2].base_stat}</h4>
+                    <h4>{pokemon.stats?.[2].stat.name.toUpperCase()}</h4>
+                    <h3>{pokemon.stats?.[2].base_stat}</h3>
                 </div>
                 <div className="stat-spa">
-                    <h4>{pokemon.stats?.[3].stat.name}</h4>
-                    <h4>{pokemon.stats?.[3].base_stat}</h4>
+                    <h4>S.ATTACK</h4>
+                    <h3>{pokemon.stats?.[3].base_stat}</h3>
                 </div>
             </div>
         </div>

@@ -126,6 +126,13 @@ footer>.circle-in {
   height: 200px;
 }
 
+.character-card > h4{
+  background: linear-gradient(181.51deg, #735259 -6.44%, #BC6B7C 121.95%, #7C3F4C 186.11%);
+  padding: 3px;
+  border-radius: 20px;
+  width: fit-content;
+}
+
 .stats {
   display: flex;
   flex-direction: row;
@@ -133,7 +140,19 @@ footer>.circle-in {
   width: 200px;
 }
 
+.stats > div > h4{
+  color: #9F9F9F;
+  font-weight: 100;
+}
 
+.stats > div > h3{
+  font-weight: 100;
+}
+
+.stats > div{
+  width: 100px;
+  height: 60px;
+}
 
 /* -----CHARACTER LIST----- */
 
