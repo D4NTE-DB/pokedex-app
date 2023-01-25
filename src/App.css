@@ -227,7 +227,7 @@ header img {
   height: 40%;
   top: 91px;
   max-width: 100%;
-  right: 150px;
+  right: 125px;
   z-index: 1000;
 }
 
@@ -280,6 +280,6 @@ header>a>box-icon {
   /* transform: rotate(270deg); */
   width: 30px;
   height: 30px;
-  right: 150px;
+  right: 120px;
   fill: #DD1A1A;
 }
