@@ -6,7 +6,7 @@ import { useParams, Link } from 'react-router-dom';
 import pokedex from '../assets/image 11.png'
 import arrow from '../assets/2335215.png'
 import { BoxIconElement } from 'boxicons';
-
+import { Line, Circle } from 'rc-progress';
 
 
 const CharacterDetails = () => {
@@ -26,31 +26,31 @@ const CharacterDetails = () => {
     return (
         <div className='character-details'>
             <header>
-            
+
                 <Link to="/">
-                <img src={pokedex} alt="" />
+                    <img src={pokedex} alt="" />
                 </Link>
-                
+
                 <div className="line-red">
-                    
+
                 </div>
                 <div className="line-black">
-                    
+
                 </div>
                 <div className="circle-item">
-                <div className="circle">
-                    
+                    <div className="circle">
+
+                    </div>
+                    <div className="circle-in">
+                        s
+                    </div>
                 </div>
-                <div className="circle-in">
-                    s
-                </div>
-               </div>
-               <Link to="/character">
-               <box-icon type='solid' name='left-arrow-circle'></box-icon>
+                <Link to="/character">
+                    <box-icon type='solid' name='left-arrow-circle'></box-icon>
                 </Link>
             </header>
             <div className="info-pokemon">
-           
+
                 <h2>#{pokemon.id}</h2>
                 <h2>{pokemon.name?.toUpperCase()}</h2>
                 <img src={pokemon.sprites?.other?.dream_world?.front_default} alt="" />
@@ -63,22 +63,36 @@ const CharacterDetails = () => {
                 <h4>{pokemon.types?.[0]?.type.name}</h4>
                 <h4>{pokemon.types?.[1]?.type.name}</h4>
                 <h1>Stats</h1>
-                <div className="stats">
+                <div className="stats-details">
                     <div className="stat-hp">
                         <h4>{pokemon.stats?.[0].stat.name}</h4>
-                        <h4>{pokemon.stats?.[0].base_stat}</h4>
+                        <div>
+                            <Circle percent={((pokemon.stats?.[0].base_stat)/150)*100} strokeWidth="11" trailWidth='2' strokeColor="green"/>
+                        </div>
+                        <h4>{pokemon.stats?.[0].base_stat}/150</h4>
                     </div>
                     <div className="stat-att">
                         <h4>{pokemon.stats?.[1].stat.name}</h4>
-                        <h4>{pokemon.stats?.[1].base_stat}</h4>
+                        <div>
+                        <Circle percent={((pokemon.stats?.[1].base_stat)/150)*100} strokeWidth="11" trailWidth='2' strokeColor="green"/>
+                        </div>
+                        <h4>{pokemon.stats?.[1].base_stat}/150</h4>
                     </div>
+                </div>
+                <div className="stats-details">
                     <div className="stat-def">
                         <h4>{pokemon.stats?.[2].stat.name}</h4>
-                        <h4>{pokemon.stats?.[2].base_stat}</h4>
+                        <div>
+                        <Circle percent={((pokemon.stats?.[2].base_stat)/150)*100} strokeWidth="11" trailWidth='2' strokeColor="green"/>
+                        </div>
+                        <h4>{pokemon.stats?.[2].base_stat}/150</h4>
                     </div>
                     <div className="stat-spa">
                         <h4>{pokemon.stats?.[3].stat.name}</h4>
-                        <h4>{pokemon.stats?.[3].base_stat}</h4>
+                        <div>
+                            <Circle percent={((pokemon.stats?.[3].base_stat)/150)*100} strokeWidth="11" trailWidth='2' strokeColor="green"/>
+                        </div>
+                        <h4>{pokemon.stats?.[3].base_stat}/150</h4>
                     </div>
                 </div>
                 <h1>Movements</h1>

@@ -26,12 +26,11 @@ const CharacterCard = ({ url, selectedType }) => {
 
     return (
         <div className='character-card'>
-            <h2>Info</h2>
-            <h2>{pokemon.name}</h2>
             <Link to={`/character/${pokemon.id}`}>
             <img src={pokemon.sprites?.other?.dream_world?.front_default} alt="" />
-
             </Link>
+            <h2>{pokemon.name?.toUpperCase()}</h2>
+            <h4>{pokemon.types?.[0]?.type.name} / {pokemon.types?.[1]?.type.name}</h4>
             {/* <h2>{pokemon.varieties}</h2> */}
             <div className="stats">
                 <div className="stat-hp">
