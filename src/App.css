@@ -310,6 +310,16 @@ header .circle-item {
   width: 100px;
 }
 
+@media (max-width: 700px) {
+  header .circle-item {
+    position: relative;
+    right: 100px;
+    width: 100px;
+    /* left: 300px; */
+  }
+  
+}
+
 header .circle {
   position: relative;
   top: -64px;
