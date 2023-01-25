@@ -65,24 +65,28 @@ const Character = () => {
         <div className='character'>
             <header>
 
-                <Link to="/">
-                    <img src={pokedex} alt="" />
-                </Link>
+<Link to="/">
+    <img src={pokedex} alt="" />
+</Link>
 
-                <div className="line-red">
+<div className="line-red">
 
-                </div>
-                <div className="line-black">
+</div>
+<div className="line-black">
 
-                </div>
-                <div className="circle">
+</div>
+<div className="circle-item">
+    <div className="circle">
 
-                </div>
-                <div className="circle-in">
-
-                </div>
-
-            </header>
+    </div>
+    <div className="circle-in">
+        s
+    </div>
+</div>
+<Link to="/character">
+    <box-icon type='solid' name='left-arrow-circle'></box-icon>
+</Link>
+</header>
             <div className="character-info">
 
 
