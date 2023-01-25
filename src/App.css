@@ -246,10 +246,21 @@ footer>.circle-in {
 }
 
 .stats-details {
-  display: flex;
-  width: 40%;
-  flex-direction: row;
-  justify-content: left;
+    display: flex;
+    width: 40%;
+    max-width: 50%;
+    flex-direction: row;
+    justify-content: left;
+  }
+
+@media (max-width: 700px) {
+  .stats-details {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    flex-direction: row;
+    justify-content: left;
+  }
 }
 
 .stats-details>div>div {
