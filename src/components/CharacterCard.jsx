@@ -5,23 +5,23 @@ import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import '../App.css'
 
-const CharacterCard = ({ url, key }) => {
+const CharacterCard = ({ url, selectedType }) => {
 
     const [pokemon, setPokemon] = useState({})
     const [pokeSpecies, setPokeSpicies] = useState({})
     const [pokemons, setPokemons] = useState([])
 
-
+    
     useEffect(() => {
         axios.get(`${url}`)
-            .then(res => setPokemon(res.data))
-    }, [key])
-
-    useEffect(() => {
-        axios.get(`https://pokeapi.co/api/v2/pokemon-species/1`)
-            .then(res => setPokeSpicies(res.data))
+        .then(res => {
+            setPokemon(res.data)
+            if (res.data.types[0].type.name.includes(selectedType) || res.data.types[1]?.type.name.includes(selectedType) ) {
+            }
+            
+        });
     }, [])
-
+    // console.log("12 " + pokemon)
     //console.log(pokeSpecies.varieties?.[0].pokemon.name)
 
     return (

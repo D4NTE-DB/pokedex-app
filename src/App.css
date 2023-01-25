@@ -29,28 +29,7 @@ body{
   max-width: 80%;
 }
 
-.search{
-  margin-top: 60px;
-}
 
-.search > input{
-  min-width: 300px;
-  max-width: 452px;
-  height: 34px;
-  text-align: center;
-}
-
-.search > a > button{
-  width: 100px;
-  height: 34px;
-  background-color: #FE1936;
-}
-
-.search > button{
-  width: 100px;
-  height: 34px;
-  background-color: #FE1936;
-}
 
 footer{
   position: absolute;
@@ -88,6 +67,38 @@ footer > .circle-in{
   border: 12px solid;
   bottom: 107px;
   margin-bottom: -100px;
+}
+
+/* ----CHARACTER---- */
+
+.search{
+  margin-top: 60px;
+}
+
+.search > input{
+  min-width: 300px;
+  max-width: 452px;
+  height: 34px;
+  text-align: center;
+}
+
+.search > a > button{
+  width: 100px;
+  height: 34px;
+  background-color: #FE1936;
+}
+
+.search > button{
+  width: 100px;
+  height: 34px;
+  background-color: #FE1936;
+}
+
+.search > select{
+  min-width: 150px;
+  max-width: 226px;
+  height: 34px;
+  text-align: center;
 }
 
 /* ----CHARACTER CARD CSS---- */
