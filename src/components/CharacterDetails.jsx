@@ -88,7 +88,7 @@ const CharacterDetails = () => {
                         <h4>{pokemon.stats?.[2].base_stat}/150</h4>
                     </div>
                     <div className="stat-spa">
-                        <h4>{pokemon.stats?.[3].stat.name.toUpperCase()}</h4>
+                        <h4>S.ATTACK</h4>
                         <div>
                             <Circle percent={((pokemon.stats?.[3].base_stat)/150)*100} strokeWidth="11" trailWidth='2' strokeColor="green"/>
                         </div>
