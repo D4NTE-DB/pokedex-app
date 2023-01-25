@@ -30,7 +30,11 @@ const CharacterCard = ({ url, selectedType }) => {
             <img src={pokemon.sprites?.other?.dream_world?.front_default} alt="" />
             </Link>
             <h2>{pokemon.name?.toUpperCase()}</h2>
-            <h4>{pokemon.types?.[0]?.type.name}  {pokemon.types?.[1]?.type.name}</h4>
+            <h3>Type/s</h3>
+            <div className="type-card">
+            <h4>{pokemon.types?.[0]?.type.name.toUpperCase()}</h4>
+            <h4>{pokemon.types?.[1]?.type.name.toUpperCase()}</h4>
+            </div>
             {/* <h2>{pokemon.varieties}</h2> */}
             <div className="stats">
                 <div className="stat-hp">

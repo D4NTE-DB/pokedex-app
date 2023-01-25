@@ -110,15 +110,17 @@ footer>.circle-in {
   height: 400px;
   background: linear-gradient(178.92deg, #7EC6C5 0.92%, #ABDAC6 47.96%, #CAE099 99.08%);
   border-radius: 4px 4px 0px 0px;
-  /* font-weight: 500; */
-  /* font-size: 45px; */
-  line-height: 30px;
+  
 }
 
 .character-card > h2{
   font-weight: 300;
   text-shadow: 2px 2px 6px ;
-  text-rendering: ;
+}
+
+.character-card > h3{
+  font-weight: 300;
+  color: #9F9F9F;
 }
 
 .character-card>a>img {
@@ -126,11 +128,18 @@ footer>.circle-in {
   height: 200px;
 }
 
-.character-card > h4{
-  background: linear-gradient(181.51deg, #735259 -6.44%, #BC6B7C 121.95%, #7C3F4C 186.11%);
+.type-card{
+ display: flex;
+ flex-direction: row;
+ width: 120px; 
+}
+
+.type-card > h4{
+  background: rgba(162, 138, 138, 0.387);
   padding: 3px;
   border-radius: 20px;
   width: fit-content;
+  font-weight: 100;
 }
 
 .stats {
