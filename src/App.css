@@ -139,7 +139,8 @@ footer>.circle-in {
   padding: 3px;
   border-radius: 20px;
   width: fit-content;
-  font-weight: 100;
+  font-weight: 300;
+    text-shadow: 2px 2px 6px;
 }
 
 .stats {
@@ -155,7 +156,8 @@ footer>.circle-in {
 }
 
 .stats > div > h3{
-  font-weight: 100;
+  font-weight: 300;
+    text-shadow: 2px 2px 6px;
 }
 
 .stats > div{
