@@ -57,22 +57,22 @@ const CharacterDetails = () => {
                 <h4>Peso: {pokemon.weight}</h4>
                 <h4>Altura: {pokemon.height}</h4>
                 <h2>Habilidades</h2>
-                <h4>{pokemon.abilities?.[0]?.ability?.name}</h4>
-                <h4>{pokemon.abilities?.[1]?.ability?.name}</h4>
+                <h4>{pokemon.abilities?.[0]?.ability?.name.toUpperCase()}</h4>
+                <h4>{pokemon.abilities?.[1]?.ability?.name.toUpperCase()}</h4>
                 <h2>Tipo</h2>
-                <h4>{pokemon.types?.[0]?.type.name}</h4>
-                <h4>{pokemon.types?.[1]?.type.name}</h4>
+                <h4>{pokemon.types?.[0]?.type.name.toUpperCase()}</h4>
+                <h4>{pokemon.types?.[1]?.type.name.toUpperCase()}</h4>
                 <h1>Stats</h1>
                 <div className="stats-details">
                     <div className="stat-hp">
-                        <h4>{pokemon.stats?.[0].stat.name}</h4>
+                        <h4>{pokemon.stats?.[0].stat.name.toUpperCase()}</h4>
                         <div>
                             <Circle percent={((pokemon.stats?.[0].base_stat)/150)*100} strokeWidth="11" trailWidth='2' strokeColor="green"/>
                         </div>
                         <h4>{pokemon.stats?.[0].base_stat}/150</h4>
                     </div>
                     <div className="stat-att">
-                        <h4>{pokemon.stats?.[1].stat.name}</h4>
+                        <h4>{pokemon.stats?.[1].stat.name.toUpperCase()}</h4>
                         <div>
                         <Circle percent={((pokemon.stats?.[1].base_stat)/150)*100} strokeWidth="11" trailWidth='2' strokeColor="green"/>
                         </div>
@@ -81,14 +81,14 @@ const CharacterDetails = () => {
                 </div>
                 <div className="stats-details">
                     <div className="stat-def">
-                        <h4>{pokemon.stats?.[2].stat.name}</h4>
+                        <h4>{pokemon.stats?.[2].stat.name.toUpperCase()}</h4>
                         <div>
                         <Circle percent={((pokemon.stats?.[2].base_stat)/150)*100} strokeWidth="11" trailWidth='2' strokeColor="green"/>
                         </div>
                         <h4>{pokemon.stats?.[2].base_stat}/150</h4>
                     </div>
                     <div className="stat-spa">
-                        <h4>{pokemon.stats?.[3].stat.name}</h4>
+                        <h4>{pokemon.stats?.[3].stat.name.toUpperCase()}</h4>
                         <div>
                             <Circle percent={((pokemon.stats?.[3].base_stat)/150)*100} strokeWidth="11" trailWidth='2' strokeColor="green"/>
                         </div>
