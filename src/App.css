@@ -45,6 +45,7 @@ body {
 .Home>img {
   top: 12px;
   max-width: 80%;
+  margin-top: 250px;
 }
 
 
@@ -54,6 +55,15 @@ footer {
   background: #DD1A1A;
   width: 100%;
   margin-top: 183px;
+}
+
+@media (max-width: 841px) {
+  footer {
+    position: absolute;
+    background: #DD1A1A;
+    width: 100%;
+    margin-top: 188px;
+  }
 }
 
 footer>.line-red {

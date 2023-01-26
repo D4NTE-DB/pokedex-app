@@ -65,28 +65,28 @@ const Character = () => {
         <div className='character'>
             <header>
 
-<Link to="/">
-    <img src={pokedex} alt="" />
-</Link>
+                <Link to="/">
+                    <img src={pokedex} alt="" />
+                </Link>
 
-<div className="line-red">
+                <div className="line-red">
 
-</div>
-<div className="line-black">
+                </div>
+                <div className="line-black">
 
-</div>
-<div className="circle-item">
-    <div className="circle">
+                </div>
+                <div className="circle-item">
+                    <div className="circle">
 
-    </div>
-    <div className="circle-in">
-        s
-    </div>
-</div>
-<Link to="/character">
-    <box-icon type='solid' name='left-arrow-circle'></box-icon>
-</Link>
-</header>
+                    </div>
+                    <div className="circle-in">
+                        s
+                    </div>
+                </div>
+                <Link to="/character">
+                    <box-icon type='solid' name='left-arrow-circle'></box-icon>
+                </Link>
+            </header>
             <div className="character-info">
 
 
@@ -100,19 +100,19 @@ const Character = () => {
                         onChange={e => setInputSearch(e.target.value)}
                     />
                     <button onClick={search}>Search</button>
-                    <select  onChange={selectType}>
+                    <select onChange={selectType}>
                         <option value="">Elige un tipo</option>
                         {
                             pokemonType.results?.map((opt, i) => (
-                                <option key={i} value={opt.url}>{opt.name}</option>
+                                <option key={i} value={opt.url}>{opt.name.toUpperCase()}</option>
                             ))
                         }
                     </select>
                     <div className="character-list">
                         {
                             pokemon?.map((poke) => (
-                                <CharacterCard 
-                                url={poke.url ? poke.url : poke.pokemon.url} key={poke.url ? poke.url : poke.pokemon.url} selectedType={typeSelected} />
+                                <CharacterCard
+                                    url={poke.url ? poke.url : poke.pokemon.url} key={poke.url ? poke.url : poke.pokemon.url} selectedType={typeSelected} />
                             ))
                         }
                     </div>
